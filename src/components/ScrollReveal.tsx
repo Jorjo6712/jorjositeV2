@@ -1,5 +1,5 @@
 import { motion, useInView, useAnimation } from 'framer-motion'
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface ScrollRevealProps {
   children?: JSX.Element|JSX.Element[],
