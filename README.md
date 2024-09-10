@@ -10,7 +10,7 @@ which led to this remade version using React.
 If you're interested in the archived version 
 you can checkout the code [here](https://github.com/Jorjo6712/jorjosite.dev).
 
-TEMP LINK: 
+TEMP LINK: [jorjosite.dev](https://jorjosite-v2.vercel.app/)
 
 ## Dependencies used
 

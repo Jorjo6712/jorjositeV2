@@ -9,6 +9,8 @@ import { FaAngleDown } from "react-icons/fa"
 import { IoMdMail } from "react-icons/io"
 import { FaLinkedin } from "react-icons/fa"
 
+import { Tooltip } from 'react-tooltip'
+
 export const Home : React.FC = () => {
   return (
     <>
@@ -44,9 +46,19 @@ export const Home : React.FC = () => {
                 }}
             >
               <a href='https://github.com/Jorjo6712' target='_blank'> <FaGithub/> </a>
-              <FiPhoneCall/>
-              <IoMdMail/>
-              <FaLinkedin/>
+              <a data-tooltip-id='phone-tooltip' data-tooltip-content="+45 41414092" data-tooltip-place="top" >
+                <FiPhoneCall/>
+                <Tooltip 
+                  id="phone-tooltip"
+                  style={{
+                   backgroundColor: 'white',
+                   color: 'black',
+                   fontSize: 'large',
+                  }}
+                />
+              </a>
+              <a href='mailto:jorjo6924@protonmail.com'><IoMdMail/></a>
+              <a href='https://www.linkedin.com/in/yordan-mitov-b3501322b/' target='_blank'> <FaLinkedin/> </a>
             </IconContext.Provider>
           </div>
         </div>
