@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ThreeDCanvas } from './components/3DCanvas'
 import { Link } from 'react-scroll'
