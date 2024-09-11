@@ -3,10 +3,13 @@ import { useEffect, useRef } from 'react'
 
 interface ScrollRevealProps {
   children?: JSX.Element|JSX.Element[],
-  width?: "fit-content" | "100%"
+  width?: "fit-content" | "100%",
+  y?: number | 55,
+  x?: number,
+  delay?: number | 0.575,
 }
 
-export const ScrollReveal = ({children, width = "fit-content"} : ScrollRevealProps) => {
+export const ScrollReveal = ({children, width = "fit-content", y, x, delay} : ScrollRevealProps) => {
   
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
@@ -22,16 +25,16 @@ export const ScrollReveal = ({children, width = "fit-content"} : ScrollRevealPro
   }, [controls, isInView])
 
   return (
-    <div ref={ref} style={{position: 'relative', width, }}>
+    <div ref={ref} style={{ position: 'relative', width, }}>
      <motion.div 
-        variants={{
-        hidden: { opacity: 0, y: 55 },
-        visible: { opacity: 1, y: 0 },
+      variants={{
+        hidden: { opacity: 0, y: y , x: x },
+        visible: { opacity: 1, y: 0, x: 0 },
       }}
 
       initial='hidden'
       animate={controls}
-      transition={{ duration: 0.75, delay: 0.575 }}
+      transition={{ duration: 0.75, delay: delay }}
     >
       {children}
     </motion.div>

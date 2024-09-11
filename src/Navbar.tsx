@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { ThreeDCanvas } from './components/3DCanvas'
 import { Link } from 'react-scroll'
@@ -64,8 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             className='absolute rounded-md left-[17.5%] bottom-[25%] h-[1.75px] w-6 bg-primary'
           />
         </motion.button>
-        
-       
+         
         <motion.ul
           className='fixed top-0 xl:right-0 w-full xl:w-3/12 h-6/12 h-full bg-accent bg-opacity-5 backdrop-blur-xl flex flex-col xl:items-center items-center xl:justify-start z-40' 
           initial={false}
@@ -77,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <li key={link.id} className='mt-24'>
               <motion.div className='inline-block relative'>
                 <Link
-                  className='text-primary border-2 border-black rounded px-4 py-2 text-2xl cursor-pointer'
+                  className='text-white font-extrabold border-2 border-black bg-primary bg-opacity-50 rounded-md p-2 text-2xl cursor-pointer'
                   to={link.element}
                   smooth={true}
                   duration={650}
@@ -95,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
         className='hidden xl:flex w-full py-2 fixed top-0 left-0 right-0 z-40 backdrop-blur-lg bg-transparent bg-opacity-5'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.75 }}
       >
         <div className='container w-full mx-auto flex flex-row justify-between items-center py-2'>
           <Link
@@ -115,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             {links.map((link) => (
               <li key={link.id}>
                   <Link
-                    className='text-lg text-secondary font-semibold hover:text-primary cursor-pointer relative'
+                    className='text-lg text-primary font-normal hover:text-secondary cursor-pointer relative'
                     to={link.element}
                     smooth={true}
                     duration={650}
