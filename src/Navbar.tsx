@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <div className='flex flex-row items-center justify-center'>
               <ThreeDCanvas/>
               <h1 className='text-2xl font-bold'>
-                jorjosite.dev
+                jorjosite.dev 
               </h1>
             </div>
         </Link> 
@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
         <motion.button
           onClick={toggleMenu}
           className='xl:hidden z-50 h-12 w-12 mt-3 mr-3 top-0 right-0 fixed rounded-md bg-white/0 transition-colors outline outline-primary outline-1 focus:border-none'
-        >
+        > 
           <motion.span
             variants={buttonVariants}
             animate={isOpen ? 'spanOneOpen' : 'closed'}
@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
         </motion.button>
          
         <motion.ul
-          className='fixed top-0 xl:right-0 w-full xl:w-3/12 h-6/12 h-full bg-accent bg-opacity-5 backdrop-blur-xl flex flex-col xl:items-center items-center xl:justify-start z-40' 
+          className="fixed top-0 xl:right-0 w-full xl:w-3/12 h-6/12 h-full bg-accent bg-opacity-5 backdrop-blur-xl flex flex-col xl:items-center items-center xl:justify-start z-40" 
           initial={false}
           animate={isOpen ? 'open' : 'closed'}
           variants={menuVariants}
@@ -76,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <li key={link.id} className='mt-24'>
               <motion.div className='inline-block relative'>
                 <Link
-                  className='text-white font-extrabold border-2 border-black bg-primary bg-opacity-50 rounded-md p-2 text-2xl cursor-pointer'
+                  className="text-primary font-extrabold text-2xl cursor-pointer"
                   to={link.element}
                   smooth={true}
                   duration={650}

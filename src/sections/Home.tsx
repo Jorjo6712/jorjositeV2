@@ -14,7 +14,7 @@ import { Typewriter } from 'react-simple-typewriter'
 export const Home : React.FC = () => {
   return (
     <div className="block">
-      <ScrollReveal y={55}>
+      <ScrollReveal y={55} once={true} transitionDuration={0.75}>
         <div className="flex relative xl:flex-row h-64 mt-44 flex-col justify-center items-center">
           <div 
             className="xl:w-6/12 w-9/12 h-full flex flex-col justify-center items-center gap-2.5 bg-white border-black border-2 border-b-0 xl:border-b-2 xl:border-r-0 p-6 rounded-t-lg xl:rounded-tr-none xl:rounded-l-lg">
@@ -51,7 +51,7 @@ export const Home : React.FC = () => {
         </div>
       </ScrollReveal>
         <div className="flex justify-center items-center">
-          <ScrollReveal x={55} delay={0.675}>
+          <ScrollReveal x={55} once={true} delay={0.675} transitionDuration={0.75}>
             <div className="flex flex-row mt-20 w-full xl:w-full h-10 xl:mt-5 border-black border-2 rounded py-6 px-6 space-x-12 justify-center items-center">
               <IconContext.Provider
                   value= {{
@@ -65,11 +65,8 @@ export const Home : React.FC = () => {
                   <FiPhoneCall/>
                   <Tooltip 
                     id="phone-tooltip"
-                    style={{
-                     backgroundColor: 'white',
-                     color: 'black',
-                     fontSize: 'large',
-                    }}
+                    
+                    opacity={100}
                   />
                 </a>
                 <a href='mailto:jorjo6924@protonmail.com'><IoMdMail/></a>
