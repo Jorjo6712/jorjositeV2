@@ -1,5 +1,3 @@
-import { ScrollReveal } from '../components/ScrollReveal'
-
 export const About: React.FC = () => {
   return (
     <div className="flex flex-col gap-2 mt-6 w-full">
