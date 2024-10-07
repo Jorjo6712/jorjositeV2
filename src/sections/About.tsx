@@ -1,34 +1,41 @@
-import { ScrollReveal } from "../components/ScrollReveal"
+import { ScrollReveal } from '../components/ScrollReveal'
 
-export const About : React.FC = () => {
+export const About: React.FC = () => {
   return (
-    <div className="flex flex-col gap-0.5 w-64">
-      <ScrollReveal 
-        x={-55}
-        once={true}
-        transitionDuration={0.55}
-      > 
-          <h1 className="text-3xl text-primary justify-self-start self-start"> Who am i?</h1>
-      </ScrollReveal>
-      
-      <ScrollReveal
-        once={true}
-        transitionDuration={0.55}
-        delay={0.35} 
-      >
-        <h2 className="text-lg text-accent justify-self-end self-end"> What do i do? </h2>
-      </ScrollReveal>
-      <ScrollReveal
-        scaleVisible={1}
-        scaleHidden={0}
-        transitionDuration={0.75}
-        delay={0.365}
-        once={false}
-      >
-        <div className="flex justify-items-center items-center">
-          <p className="text-secondary text-xl"> Hello </p>
+    <div className="flex flex-col gap-2 mt-6 w-full">
+      <div className="flex flex-row justify-center gap-2">
+        <div className="flex flex-col justify-start items-end w-6/12">
+          <div className="bg-primary text-primary bg-opacity-5 text-nowrap rounded-lg px-4"> AUG, 2021 </div>
         </div>
-      </ScrollReveal>
+        <div className="flex flex-col gap-2 justify-center items-center">
+          <div className="bg-secondary rounded-full p-1.5" />
+          <span className="bg-accent p-0.5 h-52" />
+          <div className="bg-secondary rounded-full p-1.5" />
+        </div>
+        <div className="flex flex-col justify-end items-start w-6/12">
+          <div className="bg-primary text-primary bg-opacity-5 rounded-lg text-nowrap px-4"> JUN, 2022 </div>
+        </div>
+      </div>
+
+      <div className="flex flex-row justify-center gap-2">
+        <div className="relative flex flex-col gap-[5px] justify-center items-center">
+          <span className="bg-accent p-0.5 h-52" />
+        </div>
+      </div>
+
+      <div className="flex flex-row justify-center gap-2">
+        <div className="flex flex-col justify-start items-end w-6/12">
+          <div className="bg-primary text-primary bg-opacity-5 rounded-lg text-nowrap px-4"> MAY, 2023 </div>
+        </div>
+        <div className="flex flex-col gap-2 justify-center items-center">
+          <div className="bg-secondary rounded-full p-1.5" />
+          <span className="bg-accent p-0.5 h-52" />
+          <div className="bg-secondary rounded-full p-1.5" />
+        </div>
+        <div className="flex flex-col justify-end items-start w-6/12">
+          <div className="bg-primary text-primary bg-opacity-5 rounded-lg text-nowrap px-4"> PRESENT </div>
+        </div>
+      </div>
     </div>
   )
 }

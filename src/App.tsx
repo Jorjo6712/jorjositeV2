@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <div id="home" className='h-screen flex justify-center'>
           <Home />
         </div>
-        <div id="about" className='h-screen flex justify-center items-center'>
+        <div id="about" className='h-screen flex justify-center items-center mt-28'>
           <About />
         </div>
         <div id="skills" className='h-screen flex justify-center items-center'>

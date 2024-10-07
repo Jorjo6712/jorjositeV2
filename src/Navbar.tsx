@@ -24,31 +24,31 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
 
   return (
     <>
-      <motion.div 
-        className='xl:hidden flex justify-between items-center w-full py-4 fixed top-0 left-0 right-0 z-30 bg-opacity-5'
+      <motion.div
+        className='xl:hidden flex justify-between items-center w-full py-4 fixed top-0 left-0 right-0 z-40 bg-opacity-5'
         style={isOpen ? { backdropFilter: "none" } : { backdropFilter: "blur(16px)" }} // HACK: Fix for mobile ul not being blurred when open while mobile nav is blurred
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-         <Link
-            className="cursor-pointer"
-            to={"home"}
-            smooth={true}
-            duration={650}
-          >
-            <div className='flex flex-row items-center justify-center'>
-              <ThreeDCanvas/>
-              <h1 className='text-2xl font-bold'>
-                jorjosite.dev 
-              </h1>
-            </div>
-        </Link> 
+        <Link
+          className="cursor-pointer"
+          to={"home"}
+          smooth={true}
+          duration={650}
+        >
+          <div className='flex flex-row items-center justify-center'>
+            <ThreeDCanvas />
+            <h1 className='text-2xl font-bold'>
+              jorjosite.dev
+            </h1>
+          </div>
+        </Link>
 
         <motion.button
           onClick={toggleMenu}
           className='xl:hidden z-50 h-12 w-12 mt-3 mr-3 top-0 right-0 fixed rounded-md bg-white/0 transition-colors outline outline-primary outline-1 focus:border-none'
-        > 
+        >
           <motion.span
             variants={buttonVariants}
             animate={isOpen ? 'spanOneOpen' : 'closed'}
@@ -64,9 +64,9 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             className='absolute rounded-md left-[17.5%] bottom-[25%] h-[1.75px] w-6 bg-primary'
           />
         </motion.button>
-         
+
         <motion.ul
-          className="fixed top-0 xl:right-0 w-full xl:w-3/12 h-6/12 h-full bg-accent bg-opacity-5 backdrop-blur-xl flex flex-col xl:items-center items-center xl:justify-start z-40" 
+          className="fixed top-0 xl:right-0 w-full xl:w-3/12 h-6/12 h-full bg-accent bg-opacity-5 backdrop-blur-xl flex flex-col xl:items-center items-center xl:justify-start z-40"
           initial={false}
           animate={isOpen ? 'open' : 'closed'}
           variants={menuVariants}
@@ -104,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             duration={650}
           >
             <div className='flex sm:flex flex-row items-center justify-center'>
-              <ThreeDCanvas/>
+              <ThreeDCanvas />
               <h1 className='text-2xl font-bold'>
                 jorjosite.dev
               </h1>
@@ -113,14 +113,14 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
           <ul className='flex ml-auto gap-x-10'>
             {links.map((link) => (
               <li key={link.id}>
-                  <Link
-                    className='text-lg text-primary font-normal hover:text-secondary cursor-pointer relative'
-                    to={link.element}
-                    smooth={true}
-                    duration={650}
-                  >
-                    {link.id}
-                  </Link>
+                <Link
+                  className='text-lg text-primary font-normal hover:text-secondary cursor-pointer relative'
+                  to={link.element}
+                  smooth={true}
+                  duration={650}
+                >
+                  {link.id}
+                </Link>
               </li>
             ))}
           </ul>
