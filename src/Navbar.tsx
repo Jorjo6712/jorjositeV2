@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
     <>
       <motion.div
         className='xl:hidden flex justify-between items-center w-full py-4 fixed top-0 left-0 right-0 z-40 bg-opacity-5'
-        style={isOpen ? { backdropFilter: "none" } : { backdropFilter: "blur(16px)" }} // HACK: Fix for mobile ul not being blurred when open while mobile nav is blurred
+        style={isOpen ? { backdropFilter: "none" } : { backdropFilter: "blur(16px)" }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -39,7 +39,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
         >
           <div className='flex flex-row items-center justify-center'>
             <ThreeDCanvas />
-            <h1 className='text-2xl font-bold'>
+            <h1 className='text-2xl text-white font-bold'>
               jorjosite.dev
             </h1>
           </div>
@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
         </motion.button>
 
         <motion.ul
-          className="fixed top-0 xl:right-0 w-full xl:w-3/12 h-6/12 h-full bg-accent bg-opacity-5 backdrop-blur-xl flex flex-col xl:items-center items-center xl:justify-start z-40"
+          className="fixed top-0 xl:right-0 w-full xl:w-3/12 h-6/12 h-full bg-opacity-5 backdrop-blur-xl flex flex-col xl:items-center items-center xl:justify-start z-40"
           initial={false}
           animate={isOpen ? 'open' : 'closed'}
           variants={menuVariants}
@@ -76,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <li key={link.id} className='mt-24'>
               <motion.div className='inline-block relative'>
                 <Link
-                  className="text-primary font-extrabold text-2xl cursor-pointer"
+                  className="text-white font-extrabold text-2xl cursor-pointer"
                   to={link.element}
                   smooth={true}
                   duration={650}
@@ -105,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
           >
             <div className='flex sm:flex flex-row items-center justify-center'>
               <ThreeDCanvas />
-              <h1 className='text-2xl font-bold'>
+              <h1 className='text-2xl text-white font-bold'>
                 jorjosite.dev
               </h1>
             </div>
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
             {links.map((link) => (
               <li key={link.id}>
                 <Link
-                  className='text-lg text-primary font-normal hover:text-secondary cursor-pointer relative'
+                  className='text-lg text-white font-normal hover:text-secondary cursor-pointer relative'
                   to={link.element}
                   smooth={true}
                   duration={650}
@@ -129,4 +129,3 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
     </>
   )
 }
-

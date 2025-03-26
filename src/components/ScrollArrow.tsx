@@ -5,24 +5,24 @@ import { IconContext } from 'react-icons'
 export const ScrollArrow = () => {
   return (
     <div className="flex justify-center xl:mt-36 mt-14 sm:mt-4 w-full text-center">
-      <div className="w-9 justify-center items-center rounded-full text-white z-30 bg-primary p-2.5">
+      <div className="w-9 justify-center items-center rounded-full text-[#1F1F1F] z-30 bg-primary p-2.5">
         <IconContext.Provider
-          value= {{
+          value={{
             style: {
               scale: '1.5',
               cursor: 'pointer',
             }
           }}
         >
-          <Link 
-            to={"about"} 
+          <Link
+            to={"about"}
             smooth={true}
             duration={650}
           >
-            <FaAngleDown/>
+            <FaAngleDown />
           </Link>
         </IconContext.Provider>
-        </div>
+      </div>
     </div>
   )
 }

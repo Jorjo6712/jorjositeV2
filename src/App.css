@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
-* { font-family: "Red Hat Display"; }
-html {  background: #F5F5F5;  }
+* {
+  font-family: "Red Hat Display";
+}
+
+html {
+  background: rgba(22, 23, 26, 1);
+}
